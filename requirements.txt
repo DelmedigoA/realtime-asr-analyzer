@@ -1,0 +1,6 @@
+numpy
+librosa
+transformers
+torch
+faster-whisper
+ipython
