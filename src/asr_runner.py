@@ -7,7 +7,7 @@ from .utils import load_audio, load_audio_chunk, strip_timestamps
 
 text_queue = asyncio.Queue()
 
-asr = FasterWhisperASR(LANGUAGE, MODEL_SIZE)
+asr = FasterWhisperASR(LANGUAGE, MODEL_SIZE, model_dir = "/content/realtime-asr-analyzer/whisper_dir")
 online = OnlineASRProcessor(asr)
 
 silence = np.zeros(SAMPLING_RATE, dtype=np.float32)
