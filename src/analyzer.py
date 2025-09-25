@@ -36,8 +36,10 @@ async def analyzer_loop(dict_state, text_analyzer, text_queue):
         if full_text is None:
             break
 
-        prompt = text_analyzer.get_prompt(role = ROLE, few_shots = SHOTS, command = COMMAND):
-
+        prompt = text_analyzer.get_prompt(
+          role = ROLE, few_shots = SHOTS, command = COMMAND.format(
+          full_text=full_text,
+          dict_state=dict_state))
         raw_output = text_analyzer(prompt).strip().split("<|im_end|>")[0]
         print("🔎 LLM Decisions:", raw_output)
         try:
