@@ -66,7 +66,7 @@ SHOTS = (
         )
 
 COMMAND = (
-    f"Transcript so far: {full_text}\n"
-    f"Current dict_state = {dict_state}\n"
+    "Transcript so far: {full_text}\n"
+    "Current dict_state = {dict_state}\n"
     "YOUR DECISIONS:"
 )
