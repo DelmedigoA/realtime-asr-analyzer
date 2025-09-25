@@ -1,7 +1,7 @@
 SAMPLING_RATE = 16_000
 LANGUAGE = "he"
 HF_PATH = "Qwen/Qwen3-4B-Instruct-2507"
-
+MODEL_SIZE = "large-v2"
 ROLE = (
         "You are a survey dict_state updater.\n"
         "You ALWAYS try to extract useful structured information from the transcript.\n"
