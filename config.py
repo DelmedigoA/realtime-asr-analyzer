@@ -2,7 +2,7 @@ SAMPLING_RATE = 16_000
 LANGUAGE = "he"
 HF_PATH = "Qwen/Qwen3-4B-Instruct-2507"
 
-role = (
+ROLE = (
         "You are a survey dict_state updater.\n"
         "You ALWAYS try to extract useful structured information from the transcript.\n"
         "If the transcript contains a name, age, address, date, or other respondent info, "
@@ -14,7 +14,7 @@ role = (
         "  • Values must be valid Python (strings quoted, numbers as ints).\n\n"
     )
 
-shots = (
+SHOTS = (
         "Examples:\n\n"
         "Text: 'ron is 35 years old.'\n"
         "dict_state = {'respondent_first_name': 'ron', 'age': None}\n"
@@ -65,7 +65,7 @@ shots = (
         "Decisions: [\"dict_state['respondent_first_name'] = 'Michael'\", \"dict_state['respondent_last_name'] = 'Levi'\", \"dict_state['birth_date'] = '1988-02-05'\", \"dict_state['age'] = 37\", \"dict_state['full_address'] = '24 River Road'\", \"dict_state['contract_start_date_in_date_format'] = '2024-08-15'\", \"dict_state['amount_paid'] = 1500\", \"dict_state['currency'] = 'USD'\", \"dict_state['apartment_size_sq'] = 75\"]\n\n"
         )
 
-command=(
+COMMAND = (
     f"Transcript so far: {full_text}\n"
     f"Current dict_state = {dict_state}\n"
     "YOUR DECISIONS:"
