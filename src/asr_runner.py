@@ -19,7 +19,6 @@ print("✅ Model ready and warmed up!")
 async def run_realtime_asr(audio_path, min_chunk=1.0):
     audio = load_audio(audio_path)
     duration = len(audio) / SAMPLING_RATE
-    print(f"Audio duration: {duration:.2f} sec")
 
     beg, start = 0.0, time.time()
     transcription = ""
